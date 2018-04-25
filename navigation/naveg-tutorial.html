@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<a href="naveg-tutorial.html"></a>
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family:"LAto" Arial, Helvetica, Sans-serif;
+    margin: 0;
+}
+
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
+#desktop {background-color:black;}
+#youtube {background-color:red;}
+#whatsapp {background-color:green;}
+#facebook {background-color:#191970;}
+
+
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #191970;
+    color: black;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+}
+
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <center>
+       <h2>Tutoriais</h2>
+       <p>Aqui você encontra todas as novidades e tutorias, também sobre SmartPhones e tudo para Desktop</p>
+    </center>
+  </div>
+
+  <div id="desktop" class="tabcontent">
+    <h3>Desktop</h3>
+  </div>
+
+  <div id="youtube" class="tabcontent">
+    <h3>YouTube</h3>
+  </div>
+
+  <div id="whatsapp" class="tabcontent">
+    <h3>WhatsApp</h3>
+  </div>
+
+  <div id="facebook" class="tabcontent">
+    <h3>Facebook</h3>
+  </div>
+
+
+  <button class="tablink" onclick="openCity('desktop', this, 'black')"id="defaultOpen">Desktop</button>
+  <button class="tablink" onclick="openCity('youtube', this, 'red')">YouTube</button>
+  <button class="tablink" onclick="openCity('whatsapp', this, 'green')">WhatsApp</button>
+  <button class="tablink" onclick="openCity('facebook', this, 'blue')">Facebook</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
