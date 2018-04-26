@@ -1,22 +1,63 @@
-<!DOCTYPE html>
-<html>
-<head>
-<a href="naveg-tutorial.html"></a>
-<meta charset="utf-8" />
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<!doctype html>
+<html lang"en, pt">
+	<head>
+		<a href="naveg-tutorial.html"></a>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="resources/css/style.css" rel="stylesheet" />
+	</head>
 
+<style>
 * {
     box-sizing: border-box;
 }
 
 /* Style the body */
 body {
-    font-family:"LAto" Arial, Helvetica, Sans-serif;
+    font-family: Arial, Helvetica, Sans-serif;
     margin: 0;
 }
 
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #191970;
+    color: black;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
 
 .tablink {
     background-color: #555;
@@ -42,57 +83,46 @@ body {
     text-align: center;
 }
 
-#desktop {background-color:black;}
 #youtube {background-color:red;}
-#whatsapp {background-color:green;}
+#desktop {background-color:black;}
 #facebook {background-color:#191970;}
-
-
-/* Header/logo Title */
-.header {
-    padding: 80px;
-    text-align: center;
-    background: #191970;
-    color: black;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-    font-size: 40px;
-}
+#artigos {background-color:green;}
 
 </style>
-</head>
-<body>
 
-  <div class="header">
-    <center>
-       <h2>Tutoriais</h2>
-       <p>Aqui você encontra todas as novidades e tutorias, também sobre SmartPhones e tudo para Desktop</p>
-    </center>
+<body>
+		<div class="header">
+      <center>
+		     <h2>Tutoriais</h2>
+		     <p>Aqui você encontra todas as novidades e tutorias, também sobre SmartPhones e tudo para Desktop</p>
+      </center>
+		</div>
+
+		<div class="navbar">
+			<a href="#" class="active">INICIO</a>
+		</div>
+    
+  <div id="youtube" class="tabcontent">
+    <h3>YouTube</h3>
   </div>
 
   <div id="desktop" class="tabcontent">
     <h3>Desktop</h3>
   </div>
 
-  <div id="youtube" class="tabcontent">
-    <h3>YouTube</h3>
-  </div>
-
-  <div id="whatsapp" class="tabcontent">
-    <h3>WhatsApp</h3>
-  </div>
-
   <div id="facebook" class="tabcontent">
     <h3>Facebook</h3>
   </div>
 
+  <div id="artigos" class="tabcontent">
+    <h3>Artigos</h3>
+  </div>
 
-  <button class="tablink" onclick="openCity('desktop', this, 'black')"id="defaultOpen">Desktop</button>
-  <button class="tablink" onclick="openCity('youtube', this, 'red')">YouTube</button>
-  <button class="tablink" onclick="openCity('whatsapp', this, 'green')">WhatsApp</button>
+
+  <button class="tablink" onclick="openCity('youtube', this, 'red')"id="defaultOpen">YouTube</button>
+  <button class="tablink" onclick="openCity('desktop', this, 'black')">Desktop</button>
   <button class="tablink" onclick="openCity('facebook', this, 'blue')">Facebook</button>
+  <button class="tablink" onclick="openCity('artigos', this, 'green')">Artigos</button>
 
 <script>
 function openCity(cityName,elmnt,color) {

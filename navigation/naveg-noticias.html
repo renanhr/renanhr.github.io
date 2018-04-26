@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-<a href="naveg-registrar.html"></a>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<!doctype html>
+<html lang"en, pt">
+	<head>
+		<a href="naveg-registrar.html"></a>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="resources/css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	</head>
+
 <style>
-
-
 * {
     box-sizing: border-box;
 }
@@ -16,9 +18,9 @@
 body {
     font-family: Arial, Helvetica, Sans-serif;
     margin: 0;
-    background-color: #f1f1f1;
 }
 
+/* Header/logo Title */
 .header {
     padding: 80px;
     text-align: center;
@@ -26,8 +28,36 @@ body {
     color: black;
 }
 
+/* Increase the font size of the heading */
 .header h1 {
     font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
 /* Center website */
@@ -95,17 +125,18 @@ h1 {
 }
 
 </style>
-</head>
+
 <body>
+		<div class="header">
+                  <center>
+		    <h2>Noticias</h2>
+		    <p>Aqui você fica por dentro de todas as novidades sobre as noticias do mundo de Tecnológia e Ciência.</p>
+                  </center>
+		</div>
 
-      <div class="header">
-        <center>
-           <h2>Noticias</h2>
-           <p>Aqui você fica por dentro de todas as novidades sobre as noticias do mundo de Tecnológia e Ciência.</p>
-        </center>
-      </div>
-
-      <br>
+		<div class="navbar">
+			<a href="#" class="active">INICIO</a>
+		</div>
 
       <div id="myBtnContainer">
         <button class="btn active" onclick="filterSelection('all')">Todas as noticias estão aqui</button>
@@ -207,7 +238,7 @@ h1 {
           this.className += " active";
         });
       }
-      </script>
+</script>
 
 </body>
 </html>
